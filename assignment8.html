@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local and Session Storage Example</title>
+</head>
+<body>
+  <h2>Enter your details:</h2>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+  <label for="color">Color Preference:</label>
+  <input type="text" id="color" placeholder="Enter your favorite color"><br><br>
+
+  <button onclick="storeData()">Save Data</button>
+
+  <script>
+    function storeData() {
+      const name = document.getElementById("name").value;
+      const color = document.getElementById("color").value;
+
+    
+      localStorage.setItem("name", name);
+      localStorage.setItem("color", color);
+
+      
+      sessionStorage.setItem("name", name);
+      sessionStorage.setItem("color", color);
+
+    
+      console.log("Local Storage:");
+      console.log("Name:", localStorage.getItem("name"));
+      console.log("Color:", localStorage.getItem("color"));
+
+      console.log("Session Storage:");
+      console.log("Name:", sessionStorage.getItem("name"));
+      console.log("Color:", sessionStorage.getItem("color"));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100%;
+      padding: 20px;
+      background-color: white;
+      text-align: center;
+      font-size: 14px;
+      transition: transform 0.3s ease;
+    }
+
+    .card .image-section {
+      display: none;
+    }
+
+    
+    @media (min-width: 600px) {
+      .card {
+        width: 80%;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    
+    @media (min-width: 900px) {
+      .card {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: left;
+      }
+
+      .card .image-section {
+        display: block;
+        flex: 0 0 30%;
+        height: 100%;
+        background: url('https://via.placeholder.com/300x200') center/cover no-repeat;
+      }
+
+      .card .content {
+        flex: 1;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="image-section"></div>
+    <div class="content">
+      <h2>Responsive Card</h2>
+      <p>This card adjusts layout and style based on screen size using media queries.</p>
+    </div>
+  </div>
+
+</body>
+</html>

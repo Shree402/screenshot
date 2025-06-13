@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Survey form</title>
+    </head>
+    <body style="background-color:white;">
+        <form action="/submit_training" method="post" autocomplete="on">
+            <label for="name">full name required:</label><br>
+            <input type="text" id="name" name="name" placeholder="enter your name" required autofocus on><br><br>
+            <label for="age">age group:</label>
+            <label>gender:</label>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">female</label><br><br><br>
+            <label> checkbox:</label><br><br>
+            <input type="checkbox" name="" value="">remember me<br><br>
+            <label for="food"></label><br>
+            <select id="food" name="food" required>
+                <option value="">select</option>
+                <option value="food">biriyani</option>
+                <option value="food">fire rice</option>
+                <option value="food">grill</option>  
+                <option value="food">dosa</option>
+                </select><br><br><br>
+                <input type="submit" value="submit"><br>
+        </form>
+    </body>
+    
+</body>
+</html>
+
